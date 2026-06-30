@@ -64,8 +64,14 @@
 
   .features{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}
   .feature{background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:16px;padding:22px 22px 24px}
-  .feature h3{display:flex;align-items:center;gap:10px}
+  .feature h3{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
   .feature .ic{font-size:20px;filter:grayscale(.1)}
+  .coming{font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--gold);border:1px solid rgba(245,210,122,.4);border-radius:999px;padding:2px 9px;margin-left:2px}
+  .badge-star{font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    color:#1a1407;background:linear-gradient(180deg,#f5d27a,#e8bd55);border-radius:999px;padding:2px 9px;margin-left:2px}
+  .feature.spotlight{background:rgba(245,210,122,.06);border-color:rgba(245,210,122,.28)}
+  .glassnote{display:block;margin-top:10px;font-size:13.5px;color:var(--gold);opacity:.92}
   .feature p{margin:0;color:#c3c8d8;font-size:15.5px}
 
   .note{display:flex;gap:12px;align-items:flex-start;margin-top:22px;padding:14px 18px;
@@ -175,35 +181,38 @@
     </p>
 
     <div class="features">
-      <div class="feature">
-        <h3><span class="ic">🌙</span> The moon, framed by your window</h3>
-        <p>It knows when the moon will cross the patch of sky outside your window — and shows you exactly where to
-           look, so you can be there when it passes.</p>
+      <div class="feature spotlight">
+        <h3><span class="ic">🌙</span> Scan a spot — and see the moon’s path through it</h3>
+        <p>Aim at a place in your own surroundings — your window, your balcony, the gap between two rooftops — and
+           MoonCompass traces the moon’s upcoming path right across it, so you can see exactly <em>how</em> and
+           <em>when</em> it will pass. Pick the moment you’d love to witness, and save it.
+           <span class="glassnote">✦ Coming to XR glasses: the same path, laid over your real surroundings and read at a glance — hands-free.</span></p>
       </div>
       <div class="feature">
-        <h3><span class="ic">🌅</span> Be there for the sunrise &amp; sunset</h3>
-        <p>Find where the sun will break the horizon, or where it will set, ahead of time — so you can stand in the
-           right place at the right minute and simply watch.</p>
+        <h3><span class="ic">🔔</span> Save a moment, get a nudge</h3>
+        <p>Save a moon pass and MoonCompass reminds you the instant it’s due along the path you mapped — so the
+           moment you planned for never slips by. Contemplation, scheduled.</p>
       </div>
       <div class="feature">
         <h3><span class="ic">🔭</span> Aim, and the sky names itself</h3>
         <p>Raise the phone and the planets, the moon, even passing comets resolve out of the dark with a tap-to-read
-           note — the sky, captioned.</p>
+           note — the sky, captioned. It’s here today, with the full app UI.
+           <span class="glassnote">✦ Coming to XR glasses: the names on the real sky, no screen to hold — ask aloud what you’re seeing, or reach out and zoom a planet close. Hands free, eyes up.</span></p>
       </div>
       <div class="feature">
-        <h3><span class="ic">🔔</span> Save a moment, get a nudge</h3>
-        <p>Mark a future moon pass and MoonCompass reminds you the moment it’s visible along the sky path you saved —
-           contemplation, scheduled.</p>
+        <h3><span class="ic">🌅</span> Be there for the sunrise &amp; sunset <span class="coming">Coming</span></h3>
+        <p>Find where the sun will break the horizon, or where it will set, ahead of time — so you can stand in the
+           right place at the right minute and simply watch.</p>
       </div>
     </div>
 
     <!-- AR through-the-window film -->
     <figure>
       <div class="media phone">
-        <!-- ASSET: mooncompass-ar-screen-windows-moon.mp4 (AR view: the moon's path across a home window) -->
-        <video src="mooncompass-ar-screen-windows-moon.mp4" autoplay muted loop playsinline></video>
+        <!-- ASSET: mooncompass-ar-screen-glasses.mp4 (live AR view: moon path over the real camera, bare horizon — glasses-style) -->
+        <video src="mooncompass-ar-screen-glasses.mp4" autoplay muted loop playsinline></video>
       </div>
-      <figcaption>The AR view: the moon’s path traced across the window of a room — be there when it arrives.</figcaption>
+      <figcaption>The AR view: the moon’s path traced over your real surroundings.</figcaption>
     </figure>
 
     <!-- occurrences list + reminders -->
@@ -324,7 +333,7 @@
 <!-- ============ CLOSING CTA ============ -->
 <section style="text-align:center">
   <div class="wrap">
-    <h2>The sky keeps its appointments. We’ll help you keep yours.</h2>
+    <h2>The sky keeps its appointments.<br>We’ll help you keep yours.</h2>
     <p class="lead" style="margin:0 auto 8px">
       MoonCompass arrives at the end of summer. Leave your email and we’ll let you know the moment it’s ready —
       and tell you when the next thing worth looking up for comes around.
